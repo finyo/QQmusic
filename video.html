@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+    <link rel="shortcut icon" href="./images/titlelogo.png"/>
+	<link rel="stylesheet" type="text/css" href="./css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/qqvideo.css">
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/bootstrap.js"></script>
+</head>
+<body>
+<div class="body">
+<!-- 顶部导航栏 -->
+<div class="container">
+	<div class="head-top">
+	       <!-- 顶部菜单 -->
+	     	<ul class="headTop row com-sm-16 col-md-12">
+	     	<li><a class="" href="#"><img src="images/logo.png" alt=""></a></li>
+	  		<li class=""><a href="#">音乐馆</a></li>
+	  		<li class=""><a href="#">我的音乐</a></li>
+	  		<li class=""><a href="#">下载客户端</a></li>
+	  		<li class=""><a href="#">VIP</a></li>
+	  		<li class="drowli"><a href=""></a><input type="search" class="singer-search" placeholder="歌手"><i icon="icon-search">n</i><ul id="head-top-Drowdown" class="list-group head-top-Drowdown">
+	  			 <li class="list-group-item">1、张碧晨</li>
+				 <li class="list-group-item">2、华晨宇</li>
+				 <li class="list-group-item">3、谭晶</li>
+				 <li class="list-group-item">4、陈奕迅</li>
+				 <li class="list-group-item">5、赵雷</li>
+	  		</ul></li>
+	  		<li><a href="#" class="dl-personal" data-toggle="modal" data-target="#mymodal-data">登录</a></li>
+	  		<li><a href="#"><button class="btn btn-success">开通绿钻豪华版</button></a></li>
+	  		<li><a href="#"><button class="btn btn-default">开通付费包</button></a></li>
+	        <li><a href="#"><button class="btn btn-default mobile-menu">三</button></a>
+	        </li>
+	  	</ul>
+	  	</div>
+	  	<!-- 顶部菜单2 -->
+	  	<div class="container row head-top-2">
+	  	<ul class="col-md-10 col-md-offset-2 headTop2">
+	  		<li><a href="#" style="color:#31C27C;">首页</a></li>
+	  		<li><a href="#">歌手</a></li>
+	  		<li><a href="#">专辑</a></li>
+	  		<li><a href="#">排行榜</a></li>
+	  		<li><a href="#">分类歌单</a></li>
+	  		<li><a href="#">MV</a></li>
+	  	</ul>
+	  	</div>
+	  	<!-- 相应手机端菜单 -->
+	   <div class="list-group mobilemenu-list">
+         <a href="#" class="list-group-item">音乐馆</a>
+		 <a href="#" class="list-group-item">我的音乐</a>
+		 <a href="#" class="list-group-item">下载客户端</a>
+		 <a href="#" class="list-group-item">绿钻专场</a>
+		 <a href="#" class="list-group-item">关于</a>
+</div>
+	</div>
+
+<!-- 模态框	 -->
+<div class="modal fade" id="mymodal-data" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+			</div>
+			<div class="modal-body">
+			<!-- 二维码登录页 -->
+			   <div class="ewm-login">
+				<p>快速安全登录</p>
+				<p>请使用<a href="">QQ手机版</a>扫描二维码，</p>
+                <p>安全登录，防止盗号。</p>
+                <a href=""><img src="images/erweima.png" alt=""></a>
+                </div>
+                <!-- 账号登录页 -->
+                <div class="zh-login">
+                	<p>帐号密码登录</p>
+                    <p>推荐使用<a href="#" class="ks-login">快速安全登录</a>，防止盗号。</p>
+			    <form>
+			    <input type="text" class="form-control username" placeholder="支持QQ号/邮箱/手机号登录"><br>
+			    <input type="password" class="form-control password" placeholder="密码"><br>
+			    <button data-dismiss="modal" class="btn-login btn btn-primary btn-lg btn-block">登录</button>
+			    </form>
+                </div>
+			</div>
+			<div class="modal-footer">
+				<a href="#" class="motai-qiehuan">账号密码登录</a><a href=""> | </a>
+				<a href="#">注册新账号</a><a href=""> | </a>
+				<a href="#">意见反馈</a>
+			</div>
+		</div>
+	</div>
+</div>
+    <div class="container-fluid mainVideoBox">
+    <div class="loading"></div>
+    <div class="container MVplay">
+        <video id="myVideo" class="myVideo" src="./videos/TS1.mp4"  controls width="100%">
+
+          <source class="videoSrc" src="./videos/TS1.mp4" type="video/mp4" />
+
+          <source class="videoSrc" src="./videos/TS1.mp4" type="video/webM" />
+
+          <source class="videoSrc" src="./videos/TS1.mp4" type="video/ogg" />
+
+          <p>Your browser does not support the video tag.</p>
+       </video>
+
+
+    </div>
+    <div class="MvTitle container"><p id="MVmsg">Love the Way You Lie</p>
+     <ul class="rightmenu">
+         <li><span>&nbsp;</span> 在手机上看 </li>
+         <li></li>
+         <li><span>&nbsp;</span>  </li>
+         <li></li>
+         <li><span class="liked">&nbsp;</span>  </li>
+     </ul>
+    </div>
+    </div>
+    <div class="container">
+      <div class="row MvlistBox">
+        <div class="MvList col-xs-6 col-sm-3">
+         <div class="imgkuang">
+                <img class="TS1" name="Love the Way You Lie" src="./images/0 (3).jpg" alt="这是阿姆有史以来情绪张力最强的一张嘻哈大碟！把《Relapse》续集计划丢到一边没在拍，以全新创作专辑《Recovery》复苏。 10年来，阿姆从底特律的街头痞子摇身一变成为风。"></div>
+                <p>Love the Way You Lie</p>
+                <a href="">Eminem(艾米纳姆) / Rihanna</a>
+                <p><i icon="icon-search">m</i> 1000万</p>
+        </div>
+         <div class="MvList col-xs-6 col-sm-3">
+           <div class="imgkuang">
+                <img class="TS2" name="I Don`t Wanna Live Forever" src="./images/0 (2).jpg" alt="★继【五十度灰】横扫全球5.6亿美元票房后，话题续作【五十度黑】原班人马再登情欲颠峰 ★强势收录流行天后Taylor Swift与ZAYN电影主题曲“I Don`t Wanna Live Forever”。"></div>
+                <p>I Don`t Wanna Live Forever</p>
+                <a href="">Taylor Swift / ZAYN</a>
+                <p><i icon="icon-search">m</i> 475万</p>
+        </div>
+         <div class="MvList col-xs-6 col-sm-3">
+            <div class="imgkuang">
+                <img class="TS3" name="非凡时代" src="./images/0 (5).jpg" alt="非凡任务》片尾曲燃爆上线 南征北战NZBZ“燃魂一战”致敬中国缉毒警 由麦兆辉、潘耀明导演，庄文强编剧，黄轩、段奕宏、郎月婷、祖峰等领衔主演的动作缉毒警匪片《非凡任务》将于2017年3月31日全国公映。片方继发布“以毒攻毒”版预告片、“狠角色”版预告片和“孤单英雄”版宣传片后，今日再爆电影片尾曲《非凡时代》及花絮短片。"></div>
+                <p>非凡时代</p>
+                <a href="">南征北战</a>
+                <p><i icon="icon-search">m</i> 380万</p>
+        </div>
+         <div class="MvList col-xs-6 col-sm-3">
+          <div class="imgkuang">
+                <img class="TS4" name="Juice" src="./images/0 (1).jpg" alt="“音乐赤子”吴亦凡用歌声表达态度 《Juice》宣誓年轻人腔调 日前，全民翘首期待的吴亦凡新歌《Juice》MV在国内上线，这也是吴亦凡在2017年献给所有歌迷的第一份新年大礼。《Juice》一经上线即冲上iTunes美国总榜第28位，又一次刷新了他自己之前保持的华人男歌手在该榜单上的历史最佳成绩。"></div>
+                <p>Juice</p>
+                <a href="">吴亦凡</a>
+                <p><i icon="icon-search">m</i> 1万</p>
+        </div>
+    </div>
+
+         <div class="MvL col-xs-10 col-sm-5">
+             <!-- <div class="mvzhezhao"><i icon="icon-bf">i</i></div> -->
+                <h2>MV简介</h2>
+                <p class="instrull">这是阿姆有史以来情绪张力最强的一张嘻哈大碟！把《Relapse》续集计划丢到一边没在拍，以全新创作专辑《Recovery》复苏。 10年来，阿姆从底特律的街头痞子摇身一变成为风。</p>
+        </div>
+
+ </div>
+
+
+    <div id="cbnav">
+        <div id="navTop"><i icon="icon-search">o</i></div>
+        <div><i icon="icon-search">h</i></div>
+        <div><i icon="icon-search">m</i></div>
+    </div>  
+
+
+     <div class="container-fluid main-foot">
+        <div class="container foot-con">
+            <div class="foot-menu col-xs-6 col-md-4">
+                <p>下载QQ音乐客户端</p>
+                <ul>
+                    <li><i icon="icon-foot">f</i><br>PC版</li>
+                    <li><i icon="icon-foot">a</i><br>Mac版</li>
+                    <li><i icon="icon-foot">g</i><br>Android版</li>
+                    <li><i icon="icon-foot">l</i><br>iPhone版</li>
+                </ul>
+            </div>
+
+               <div class="foot-menu col-xs-6 col-md-4">
+                <p>特色产品</p>
+                <ul>
+                    <li><i icon="icon-foot">c</i><br>全民K歌</li>
+                    <li><i icon="icon-foot">e</i><br>Super Souce</li>
+                    <li><i icon="icon-foot">p</i><br>QPlay</li>
+                </ul>
+
+                <ul>
+                    <li>QQ音乐原创</li>
+                    <li>上传视频</li> 
+                </ul><br>
+
+                 <ul>
+                    <li>车载音乐</li>
+                    <li>商演</li>
+                </ul>
+            </div>
+            
+             <div class="foot-menu col-xs-6 col-md-4">
+                <p>合作链接</p>
+                <ul>
+                    <li>CJ m</li>
+                    <li>腾讯视频</li>
+                    <li>手机QQ</li>
+                </ul>
+
+                 <ul>
+                    <li>最新QQ</li>
+                    <li>腾讯游戏</li>
+                    <li>腾讯云</li>
+                </ul>
+
+                 <ul>
+                    <li>王者荣耀</li>
+                    <li>腾讯新闻</li>
+                    <li>英雄联盟</li>
+                </ul>
+
+                 <ul>
+                    <li>星钻</li>
+                    <li>腾讯网</li>
+                    <li>更多</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer container">
+            <ul class="col-md-offset-2">
+                <li>关于腾讯</li>
+                <li>|</li>
+                <li>About Tencent</li>
+                <li>|</li>
+                <li>服务条款</li>
+                <li>|</li>
+                <li>用户协议</li>
+                <li>|</li>
+                <li>隐私政策</li>
+                <li>|</li>
+                <li>广告服务</li>
+                <li>|</li>
+                <li>腾讯招聘</li>
+                <li>|</li>
+                <li>客服中心</li>
+                <li>|</li>
+                <li>网站导航</li>
+            </ul>   
+            <br>
+            <p class="container">Copyright © 1998 - 2017 Tencent. <a href="">All Rights Reserved.</a></p>
+            <p class="container">腾讯公司 版权所有 腾讯网络文化经营许可证</p>
+        </div>
+     </div>
+</div>
+    <div class="dingnav"><p class="MVmsg container">Love the Way You Lie</p></div>
+    <div class="loading">
+        <embed src="./images/loading.gif" />
+   </div>
+    <script src="js/qqvideo.js"></script>
+</body>
+</html>

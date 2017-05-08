@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="shortcut icon" href="./images/titlelogo.png"/>
+	<link rel="stylesheet" type="text/css" href="./css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/player.css">
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/bootstrap.js"></script>
+</head>
+<body class="body">
+
+<img src="./images/2.jpg" class="blur imgfilter" alt="">
+
+
+<div class="Titlelogo">
+	<img src="./images/player_logo.png" alt="">
+</div>
+
+
+<div class="Titlelogin">
+	<a href="#" class="dl-personal" data-toggle="modal" data-target="#mymodal-data">登录</a>
+	<a href="">设置</a>
+</div>
+
+
+<div class="playerbody">
+	<div class="leftsonglist">
+	    <div class="listmenu">
+	    	<ul>
+	    		<li class="dl-personal" data-toggle="modal" data-target="#mymodal-data"><i>&nbsp;</i>收藏</li>
+	    		<li><i>&nbsp;</i><input id="addsong" type="file" name="file" />添加</li>
+	    		<li class="dl-personal" data-toggle="modal" data-target="#mymodal-data"><i>&nbsp;</i>下载</li>
+	    		<li class="removesong"><i>&nbsp;</i>删除</li>
+	    		<li id="showSure"><i>&nbsp;</i>清空列表</li>
+	    	</ul>
+	    </div>	
+
+	    <div class="songlist">
+	 <ul class="Songlist">
+	  	<li>
+	  		<input class="maincheck" type="checkbox">
+	  		<label><embed src="./images/wave.gif" />歌曲</label> 
+	  		<label>歌手</label>
+	  		<label></label>
+	  		<label>时长</label>
+	  	</li>
+
+			<li class="songrow">
+			<input class="checksong" type="checkbox">
+			<label name="song0" class="songName" alt="Rihanna - Bitch Better Have My Money">
+			<embed src="./images/wave.gif" />
+			 Bitch Better Have My Money
+			</label>
+			<label>
+			<i name="song0"  class="songNamei" alt="Rihanna - Bitch Better Have My Money">&nbsp;</i>
+			<i class="dl-personal" data-toggle="modal" data-target="#mymodal-data">&nbsp;</i>
+			<i class="dl-personal" data-toggle="modal" data-target="#mymodal-data">&nbsp;</i>
+			<i class="dl-personal" data-toggle="modal" data-target="#mymodal-data">&nbsp;</i>
+			</label>
+			<label>Rihanna</label>
+			<label class="songtime"></label>
+			</li>
+
+
+			<li class="songrow">
+			<input class="checksong" type="checkbox">
+			<label name="song1" class="songName" alt="蔡健雅 - 红色高跟鞋">
+			<embed src="./images/wave.gif" /> 
+			红色高跟鞋
+			</label> 
+			<label>
+			<i name="song1" class="songNamei" alt="蔡健雅 - 红色高跟鞋">&nbsp;</i>
+			<i class="dl-personal" data-toggle="modal" data-target="#mymodal-data">&nbsp;</i>
+			<i class="dl-personal" data-toggle="modal" data-target="#mymodal-data">&nbsp;</i>
+			<i class="dl-personal" data-toggle="modal" data-target="#mymodal-data">&nbsp;</i>
+			</label>
+			<label>蔡健雅</label>
+			<label class="songtime"></label>
+			</li>
+
+
+			<li class="songrow">
+			<input class="checksong" type="checkbox">
+			<label name="song2" class="songName" alt="张国荣 - 你这样恨我">
+			<embed src="./images/wave.gif" /> 
+			你这样恨我
+			</label>
+			<label>
+			<i name="song2" class="songNamei" alt="张国荣 - 你这样恨我">&nbsp;</i>
+			<i class="dl-personal" data-toggle="modal" data-target="#mymodal-data">&nbsp;</i>
+			<i class="dl-personal" data-toggle="modal" data-target="#mymodal-data">&nbsp;</i>
+			<i class="dl-personal" data-toggle="modal" data-target="#mymodal-data">&nbsp;</i>
+			</label>
+			<label>张国荣</label>
+			<label class="songtime"></label>
+			</li>
+
+	  		</ul>
+        </div>
+	</div>
+
+
+
+
+
+	<div class="rightLrc">
+		<div class="songImg">
+			<img class="lrcimg" src="./images/2.jpg">
+			<p class="lrsongname"></p>
+			<p class="lrcsinger"></p>
+		</div>
+
+		<div id="songgeci">
+			
+		</div>
+	</div>
+</div>
+
+
+
+<div class="controlFoot">
+	<div class="leftcontrol">
+		<span class="thelast">&nbsp;</span>
+		<span class="spbutton">&nbsp;</span>
+		<span class="thenext">&nbsp;</span>
+	    <div class="controlrange">
+	    <p class="lrsongname">&nbsp;</p>
+	    <p class="lrcsinger">&nbsp;</p>
+	    <p class="updataTime">00:00</p>
+        <div id="jingdutiao">
+        <span id="hualun"></span>
+        </div>
+	  </div>
+</div>
+
+
+	<div class="rightcontrol">
+		<span>&nbsp;</span>
+		<span>&nbsp;</span>
+		<span>&nbsp;</span>
+		<span>&nbsp;</span>
+		<span class="jingying">&nbsp;</span>
+		<div class="voicecontrol">
+		<span id="voicehualun"></span>
+		</div>
+	</div>
+</div>
+
+<audio id="mainplayer" src="">您的浏览器不支持 audio 标签!</audio>
+
+
+<!-- 模态框 -->
+<div class="modal fade" id="mymodal-data" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+			</div>
+			<div class="modal-body">
+			<!-- 二维码登录页 -->
+			   <div class="ewm-login">
+				<p>快速安全登录</p>
+				<p>请使用<a href="">QQ手机版</a>扫描二维码，</p>
+                <p>安全登录，防止盗号。</p>
+                <a href=""><img src="images/erweima.png" alt=""></a>
+                </div>
+                <!-- 账号登录页 -->
+                <div class="zh-login">
+                	<p>帐号密码登录</p>
+                    <p>推荐使用<a href="#" class="ks-login">快速安全登录</a>，防止盗号。</p>
+			    <form>
+			    <input type="text" class="form-control username" placeholder="支持QQ号/邮箱/手机号登录"><br>
+			    <input type="password" class="form-control password" placeholder="密码"><br>
+			    <button data-dismiss="modal" class="btn-login btn btn-primary btn-lg btn-block">登录</button>
+			    </form>
+                </div>
+			</div>
+			<div class="modal-footer">
+				<a href="#" class="motai-qiehuan">账号密码登录</a><a href=""> | </a>
+				<a href="#">注册新账号</a><a href=""> | </a>
+				<a href="#">意见反馈</a>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="sureclear">
+   <div class="surebox">
+   <p>QQ音乐</p>
+   <p>！确定要清空播放列表吗</p>
+   <img src="./images/loading.gif"/>
+   <button type="button" id="sureclearbtn" class="btn btn-success">确定</button>
+   <button type="button" id="unsureclearbtn" class="btn btn-default">取消</button>
+   </div>
+	
+</div>
+<script src="./js/player.js"></script>
+</body>
+</html>
